@@ -24,28 +24,28 @@ export const Footer = () => {
     <footer className="bg-card border-t border-border">
       <div className="container-padding mx-auto max-w-7xl section-padding">
         <FadeUp>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 lg:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-8">
             {/* Brand Column */}
-            <div className="lg:col-span-2">
-              <a href="#" className="flex items-center gap-2 mb-6">
-                <span className="font-display text-2xl font-bold text-primary">NUMERO</span>
+            <div className="col-span-2 sm:col-span-2 md:col-span-3 lg:col-span-2">
+              <a href="#" className="flex items-center gap-2 mb-4 sm:mb-6">
+                <span className="font-display text-xl sm:text-2xl font-bold text-primary">NUMERO</span>
               </a>
-              <p className="text-muted-foreground mb-4 max-w-sm">
+              <p className="text-muted-foreground text-sm sm:text-base mb-3 sm:mb-4 max-w-sm">
                 Digital Presence & Web Development
               </p>
-              <p className="text-muted-foreground mb-6 max-w-sm">
+              <p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6 max-w-sm">
                 We focus on giving the most cost-effective solutions to our clients, enabling them to navigate towards success in the digital space.
               </p>
               
               {/* Contact Info */}
-              <div className="space-y-2 text-sm text-muted-foreground">
-                <p>
+              <div className="space-y-2 text-xs sm:text-sm text-muted-foreground">
+                <p className="break-all">
                   <span className="text-foreground font-medium">EMAIL:</span>{' '}
                   <a href="mailto:hello@alphanumerouno.digital" className="hover:text-primary transition-colors">
                     hello@alphanumerouno.digital
                   </a>
                 </p>
-                <p>
+                <p className="break-all">
                   <span className="text-foreground font-medium">SUPPORT:</span>{' '}
                   <a href="mailto:support@alphanumerouno.digital" className="hover:text-primary transition-colors">
                     support@alphanumerouno.digital
@@ -117,11 +117,11 @@ export const Footer = () => {
         </FadeUp>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-muted-foreground text-sm">
+        <div className="border-t border-border mt-10 sm:mt-16 pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
+          <p className="text-muted-foreground text-xs sm:text-sm text-center md:text-left">
             Copyright © 2025 Numero Uno Marketing Pvt. Ltd.
           </p>
-          <p className="text-muted-foreground text-sm">
+          <p className="text-muted-foreground text-xs sm:text-sm">
             Privacy Policy | Terms & Conditions
           </p>
         </div>

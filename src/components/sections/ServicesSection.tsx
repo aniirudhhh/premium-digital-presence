@@ -48,40 +48,40 @@ export const ServicesSection = () => {
       
       <div className="container-padding mx-auto max-w-7xl relative z-10">
         {/* Section Header */}
-        <FadeUp className="text-center mb-16">
-          <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">Digital Marketing</span>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+        <FadeUp className="text-center mb-10 sm:mb-16 px-2">
+          <span className="text-primary font-medium text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4 block">Digital Marketing</span>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Digital Presence & Marketing
           </h2>
-          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-3xl mx-auto">
             We focus on giving the most cost-effective solutions to our clients, enabling them to navigate towards success in the digital space.
           </p>
         </FadeUp>
 
         {/* Services Grid */}
-        <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <StaggerContainer staggerDelay={0.1} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
           {services.map((service, index) => (
             <StaggerItem key={index}>
-              <div className="group bg-card border border-border rounded-lg p-8 h-full card-hover">
+              <div className="group bg-card border border-border rounded-lg p-5 sm:p-6 md:p-8 h-full card-hover">
                 {/* Icon */}
-                <div className="w-14 h-14 bg-secondary rounded-lg flex items-center justify-center mb-6 group-hover:bg-primary/10 transition-colors duration-300">
-                  <service.icon className="w-7 h-7 text-primary" />
+                <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-secondary rounded-lg flex items-center justify-center mb-4 sm:mb-6 group-hover:bg-primary/10 transition-colors duration-300">
+                  <service.icon className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-primary" />
                 </div>
 
                 {/* Content */}
-                <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+                <h3 className="font-display text-base sm:text-lg md:text-xl font-semibold text-foreground mb-2 sm:mb-3">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground mb-6 leading-relaxed">
+                <p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6 leading-relaxed">
                   {service.description}
                 </p>
 
                 {/* Features */}
-                <ul className="flex flex-wrap gap-2">
+                <ul className="flex flex-wrap gap-1.5 sm:gap-2">
                   {service.features.map((feature, featureIndex) => (
                     <li 
                       key={featureIndex}
-                      className="text-xs text-muted-foreground bg-secondary px-3 py-1 rounded-md"
+                      className="text-[10px] sm:text-xs text-muted-foreground bg-secondary px-2 sm:px-3 py-0.5 sm:py-1 rounded-md"
                     >
                       {feature}
                     </li>

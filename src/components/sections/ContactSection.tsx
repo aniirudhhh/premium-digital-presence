@@ -41,48 +41,48 @@ export const ContactSection = () => {
   return (
     <section id="contact" className="section-padding bg-background relative">
       <div className="container-padding mx-auto max-w-7xl">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
           {/* Left Column - Info */}
           <SlideInLeft>
-            <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">Get in Touch</span>
-            <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
+            <span className="text-primary font-medium text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4 block">Get in Touch</span>
+            <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 leading-tight">
               Let's Build a Great Online Presence!
             </h2>
-            <p className="text-muted-foreground text-lg leading-relaxed mb-10">
+            <p className="text-muted-foreground text-sm sm:text-base md:text-lg leading-relaxed mb-6 sm:mb-10">
               Ready to transform your digital presence? We focus on giving the most cost-effective solutions to our clients, enabling them to navigate towards success in the digital space.
             </p>
 
             {/* Contact Info */}
-            <div className="space-y-6 mb-10">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
-                  <Mail className="w-5 h-5 text-primary" />
+            <div className="space-y-4 sm:space-y-6 mb-6 sm:mb-10">
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                 </div>
-                <div>
-                  <p className="text-muted-foreground text-sm">Email us at</p>
-                  <a href="mailto:hello@alphanumerouno.digital" className="text-foreground font-medium hover:text-primary transition-colors">
+                <div className="min-w-0">
+                  <p className="text-muted-foreground text-xs sm:text-sm">Email us at</p>
+                  <a href="mailto:hello@alphanumerouno.digital" className="text-foreground text-sm sm:text-base font-medium hover:text-primary transition-colors break-all">
                     hello@alphanumerouno.digital
                   </a>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
-                  <MessageCircle className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                 </div>
-                <div>
-                  <p className="text-muted-foreground text-sm">Support</p>
-                  <a href="mailto:support@alphanumerouno.digital" className="text-foreground font-medium hover:text-primary transition-colors">
+                <div className="min-w-0">
+                  <p className="text-muted-foreground text-xs sm:text-sm">Support</p>
+                  <a href="mailto:support@alphanumerouno.digital" className="text-foreground text-sm sm:text-base font-medium hover:text-primary transition-colors break-all">
                     support@alphanumerouno.digital
                   </a>
                 </div>
               </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
-                  <Phone className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-secondary rounded-lg flex items-center justify-center flex-shrink-0">
+                  <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                 </div>
-                <div>
-                  <p className="text-muted-foreground text-sm">Call/WhatsApp</p>
-                  <a href="tel:+919902633980" className="text-foreground font-medium hover:text-primary transition-colors">
+                <div className="min-w-0">
+                  <p className="text-muted-foreground text-xs sm:text-sm">Call/WhatsApp</p>
+                  <a href="tel:+919902633980" className="text-foreground text-sm sm:text-base font-medium hover:text-primary transition-colors">
                     (+91) 9902633980
                   </a>
                 </div>
@@ -90,9 +90,9 @@ export const ContactSection = () => {
             </div>
 
             {/* Response Time */}
-            <div className="bg-card border border-border rounded-lg p-6 inline-flex items-center gap-4">
-              <div className="w-3 h-3 bg-primary rounded-full animate-pulse" />
-              <p className="text-muted-foreground">
+            <div className="bg-card border border-border rounded-lg p-4 sm:p-6 inline-flex items-center gap-3 sm:gap-4">
+              <div className="w-2.5 h-2.5 sm:w-3 sm:h-3 bg-primary rounded-full animate-pulse flex-shrink-0" />
+              <p className="text-muted-foreground text-sm sm:text-base">
                 Average response time: <span className="text-foreground font-medium">Under 24 hours</span>
               </p>
             </div>
@@ -100,8 +100,8 @@ export const ContactSection = () => {
 
           {/* Right Column - Form */}
           <SlideInRight delay={0.2}>
-            <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8">
-              <div className="space-y-6">
+            <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-5 sm:p-6 md:p-8">
+              <div className="space-y-4 sm:space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-foreground text-sm font-medium mb-2">
                     NAME
