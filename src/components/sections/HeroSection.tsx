@@ -68,7 +68,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground leading-[1.1] mb-6 max-w-5xl"
+            className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] mb-4 sm:mb-6 max-w-5xl px-2"
           >
             NUMERO UNO
             <span className="block text-primary">MARKETING</span>
@@ -79,7 +79,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-4 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mb-3 sm:mb-4 leading-relaxed px-4"
           >
             Growth Solutions For All — MICRO • SMALL • MID • ENTERPRISE
           </motion.p>
@@ -87,7 +87,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="text-base text-muted-foreground max-w-3xl mb-10 leading-relaxed"
+            className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-3xl mb-6 sm:mb-10 leading-relaxed px-4"
           >
             End-to-End Digital strategy ensures that every effort is Cohesive, Targeted, and Impactful. 
             Get marketing strategy that enables your business to identify ideal customers, analyze their behavior, and create personalized content that resonates.
@@ -114,7 +114,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="flex flex-wrap justify-center gap-6 md:gap-10 mt-20 pt-12 border-t border-border"
+            className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap justify-center gap-3 sm:gap-4 md:gap-8 mt-10 sm:mt-16 md:mt-20 pt-8 sm:pt-10 md:pt-12 border-t border-border w-full"
           >
             {[
               'Quick Setup',
@@ -124,9 +124,9 @@ export const HeroSection = () => {
               'Robust & Fast',
               'SEO Compliant',
             ].map((feature, index) => (
-              <div key={index} className="flex items-center gap-2">
-                <div className="w-2 h-2 bg-primary rounded-full" />
-                <span className="text-sm text-muted-foreground">{feature}</span>
+              <div key={index} className="flex items-center justify-center gap-2">
+                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full flex-shrink-0" />
+                <span className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">{feature}</span>
               </div>
             ))}
           </motion.div>

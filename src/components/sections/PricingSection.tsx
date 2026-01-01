@@ -57,22 +57,22 @@ export const PricingSection = () => {
     <section id="pricing" className="section-padding bg-background">
       <div className="container-padding mx-auto max-w-7xl">
         {/* Section Header */}
-        <FadeUp className="text-center mb-16">
-          <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">Website Packages</span>
-          <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
+        <FadeUp className="text-center mb-10 sm:mb-16 px-2">
+          <span className="text-primary font-medium text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4 block">Website Packages</span>
+          <h2 className="font-display text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6">
             Compare Packages
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+          <p className="text-muted-foreground text-sm sm:text-base md:text-lg max-w-2xl mx-auto">
             Affordable Suite — Online Presence and measurable growth. Get your Business website and storefront launch ready at unmatched pricing.
           </p>
         </FadeUp>
 
         {/* Pricing Cards */}
-        <StaggerContainer staggerDelay={0.15} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <StaggerContainer staggerDelay={0.15} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {pricingPlans.map((plan, index) => (
             <StaggerItem key={index}>
               <div 
-                className={`relative bg-card border rounded-lg p-8 h-full flex flex-col card-hover ${
+                className={`relative bg-card border rounded-lg p-5 sm:p-6 md:p-8 h-full flex flex-col card-hover ${
                   plan.popular 
                     ? 'border-primary shadow-glow' 
                     : 'border-border'
@@ -140,19 +140,19 @@ export const PricingSection = () => {
         </StaggerContainer>
 
         {/* Enterprise CTA */}
-        <FadeUp delay={0.5} className="mt-16 text-center">
-          <div className="bg-card border border-border rounded-lg p-8 md:p-12 max-w-4xl mx-auto">
-            <h3 className="font-display text-2xl font-semibold text-foreground mb-4">
+        <FadeUp delay={0.5} className="mt-10 sm:mt-16 text-center px-2">
+          <div className="bg-card border border-border rounded-lg p-5 sm:p-8 md:p-12 max-w-4xl mx-auto">
+            <h3 className="font-display text-lg sm:text-xl md:text-2xl font-semibold text-foreground mb-3 sm:mb-4">
               Enterprise Digital Advantage
             </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="text-muted-foreground text-sm sm:text-base mb-4 sm:mb-6 max-w-2xl mx-auto">
               For enterprises and brands needing customized, data-driven digital ecosystems. 
               Fully customized website architecture (10+ pages or portals).
             </p>
-            <Button variant="hero" size="lg">
+            <Button variant="hero" size="lg" className="w-full sm:w-auto">
               Schedule Consultation
             </Button>
-            <p className="text-muted-foreground text-xs mt-6">
+            <p className="text-muted-foreground text-xs mt-4 sm:mt-6">
               *Website Packages Do Not include Domain and hosting. We do this to ensure that the client has the full ownership of the content and data.
             </p>
           </div>
