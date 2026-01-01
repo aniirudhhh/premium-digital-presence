@@ -124,9 +124,9 @@ export const HeroSection = () => {
               'Robust & Fast',
               'SEO Compliant',
             ].map((feature, index) => (
-              <div key={index} className="flex items-center justify-center gap-2">
+              <div key={index} className="flex items-center justify-center gap-2 min-w-0">
                 <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full flex-shrink-0" />
-                <span className="text-xs sm:text-sm text-muted-foreground whitespace-nowrap">{feature}</span>
+                <span className="text-xs sm:text-sm text-muted-foreground text-center whitespace-normal text-balance min-w-0">{feature}</span>
               </div>
             ))}
           </motion.div>
