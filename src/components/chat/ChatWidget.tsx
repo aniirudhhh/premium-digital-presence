@@ -17,6 +17,7 @@ export const ChatWidget = () => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
+  const [showPill, setShowPill] = useState(true);
   const scrollRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -24,6 +25,25 @@ export const ChatWidget = () => {
       scrollRef.current.scrollTop = scrollRef.current.scrollHeight;
     }
   }, [messages]);
+
+  // Hide pill after 5 seconds or on scroll
+  useEffect(() => {
+    const timer = setTimeout(() => setShowPill(false), 5000);
+
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShowPill(false);
+      } else if (window.scrollY === 0) {
+        setShowPill(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      clearTimeout(timer);
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const streamChat = async (userMessage: string) => {
     const userMsg: Message = { role: 'user', content: userMessage };
@@ -114,7 +134,7 @@ export const ChatWidget = () => {
     <>
       {/* Floating Help Pill */}
       <AnimatePresence>
-        {!isOpen && (
+        {!isOpen && showPill && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
@@ -125,10 +145,10 @@ export const ChatWidget = () => {
               animate={{ scale: [1, 1.2, 1] }}
               transition={{ duration: 2, repeat: Infinity }}
             >
-              <Sparkles className="w-4 h-4 text-primary" />
+              <Sparkles className="w-3 h-3 text-primary" />
             </motion.div>
-            <div className="px-4 py-2 bg-background border-2 border-primary rounded-full shadow-lg">
-              <span className="text-sm font-medium text-foreground">Need help? Ask us!</span>
+            <div className="px-3 py-1 bg-background border-2 border-primary rounded-full shadow-lg">
+              <span className="text-xs font-medium text-foreground">Need help? Ask us!</span>
             </div>
           </motion.div>
         )}
