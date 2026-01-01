@@ -35,7 +35,7 @@ export const Navbar = () => {
         }`}
       >
         <nav className="container-padding mx-auto max-w-7xl">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex items-center justify-between h-14 sm:h-20">
             {/* Logo */}
             <a href="#" className="flex items-center gap-2">
               <span className="font-display text-2xl font-bold text-primary">NUMERO</span>
@@ -109,7 +109,7 @@ export const Navbar = () => {
             className="fixed inset-0 w-full h-screen bg-background z-[60] md:hidden flex flex-col"
           >
             {/* Mobile Menu Header */}
-            <div className="flex items-center justify-between h-20 px-4 sm:px-6 border-b border-border">
+            <div className="flex items-center justify-between h-14 sm:h-20 px-4 sm:px-6 border-b border-border">
               <a href="#" className="flex items-center gap-2">
                 <span className="font-display text-2xl font-bold text-primary">NUMERO</span>
               </a>
@@ -123,8 +123,8 @@ export const Navbar = () => {
             </div>
 
             {/* Mobile Menu Content */}
-            <div className="flex-1 flex flex-col justify-center px-8">
-              <nav className="space-y-2">
+            <div className="flex-1 flex flex-col justify-center items-center px-8">
+              <nav className="space-y-2 text-center">
                 {navLinks.map((link, index) => (
                   <motion.div
                     key={link.name}
