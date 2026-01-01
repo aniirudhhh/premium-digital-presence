@@ -3,7 +3,7 @@ import { FadeUp, SlideInLeft, SlideInRight } from '@/components/animations/Scrol
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Mail, Phone, MapPin, Send, ArrowRight } from 'lucide-react';
+import { Mail, Phone, MessageCircle, Send } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 export const ContactSection = () => {
@@ -11,7 +11,6 @@ export const ContactSection = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    company: '',
     message: '',
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,7 +27,7 @@ export const ContactSection = () => {
       description: "We'll get back to you within 24 hours.",
     });
     
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setFormData({ name: '', email: '', message: '' });
     setIsSubmitting(false);
   };
 
@@ -47,10 +46,10 @@ export const ContactSection = () => {
           <SlideInLeft>
             <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">Get in Touch</span>
             <h2 className="font-display text-4xl md:text-5xl font-bold text-foreground mb-6 leading-tight">
-              Let's Build Something Great Together
+              Let's Build a Great Online Presence!
             </h2>
             <p className="text-muted-foreground text-lg leading-relaxed mb-10">
-              Ready to transform your digital presence? We'd love to hear about your project. Fill out the form and we'll get back to you within 24 hours.
+              Ready to transform your digital presence? We focus on giving the most cost-effective solutions to our clients, enabling them to navigate towards success in the digital space.
             </p>
 
             {/* Contact Info */}
@@ -61,8 +60,19 @@ export const ContactSection = () => {
                 </div>
                 <div>
                   <p className="text-muted-foreground text-sm">Email us at</p>
-                  <a href="mailto:hello@apexagency.com" className="text-foreground font-medium hover:text-primary transition-colors">
-                    hello@apexagency.com
+                  <a href="mailto:hello@alphanumerouno.digital" className="text-foreground font-medium hover:text-primary transition-colors">
+                    hello@alphanumerouno.digital
+                  </a>
+                </div>
+              </div>
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
+                  <MessageCircle className="w-5 h-5 text-primary" />
+                </div>
+                <div>
+                  <p className="text-muted-foreground text-sm">Support</p>
+                  <a href="mailto:support@alphanumerouno.digital" className="text-foreground font-medium hover:text-primary transition-colors">
+                    support@alphanumerouno.digital
                   </a>
                 </div>
               </div>
@@ -71,21 +81,10 @@ export const ContactSection = () => {
                   <Phone className="w-5 h-5 text-primary" />
                 </div>
                 <div>
-                  <p className="text-muted-foreground text-sm">Call us at</p>
-                  <a href="tel:+1234567890" className="text-foreground font-medium hover:text-primary transition-colors">
-                    +1 (234) 567-890
+                  <p className="text-muted-foreground text-sm">Call/WhatsApp</p>
+                  <a href="tel:+919902633980" className="text-foreground font-medium hover:text-primary transition-colors">
+                    (+91) 9902633980
                   </a>
-                </div>
-              </div>
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-secondary rounded-lg flex items-center justify-center">
-                  <MapPin className="w-5 h-5 text-primary" />
-                </div>
-                <div>
-                  <p className="text-muted-foreground text-sm">Visit us at</p>
-                  <p className="text-foreground font-medium">
-                    123 Digital Ave, New York, NY 10001
-                  </p>
                 </div>
               </div>
             </div>
@@ -103,57 +102,40 @@ export const ContactSection = () => {
           <SlideInRight delay={0.2}>
             <form onSubmit={handleSubmit} className="bg-card border border-border rounded-lg p-8">
               <div className="space-y-6">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                  <div>
-                    <label htmlFor="name" className="block text-foreground text-sm font-medium mb-2">
-                      Full Name *
-                    </label>
-                    <Input
-                      id="name"
-                      name="name"
-                      type="text"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      placeholder="John Smith"
-                      className="bg-secondary border-border focus:border-primary"
-                    />
-                  </div>
-                  <div>
-                    <label htmlFor="email" className="block text-foreground text-sm font-medium mb-2">
-                      Email Address *
-                    </label>
-                    <Input
-                      id="email"
-                      name="email"
-                      type="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="john@company.com"
-                      className="bg-secondary border-border focus:border-primary"
-                    />
-                  </div>
-                </div>
-
                 <div>
-                  <label htmlFor="company" className="block text-foreground text-sm font-medium mb-2">
-                    Company Name
+                  <label htmlFor="name" className="block text-foreground text-sm font-medium mb-2">
+                    NAME
                   </label>
                   <Input
-                    id="company"
-                    name="company"
+                    id="name"
+                    name="name"
                     type="text"
-                    value={formData.company}
+                    required
+                    value={formData.name}
                     onChange={handleChange}
-                    placeholder="Your Company"
+                    placeholder="Your name"
+                    className="bg-secondary border-border focus:border-primary"
+                  />
+                </div>
+                <div>
+                  <label htmlFor="email" className="block text-foreground text-sm font-medium mb-2">
+                    EMAIL ADDRESS
+                  </label>
+                  <Input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    placeholder="your@email.com"
                     className="bg-secondary border-border focus:border-primary"
                   />
                 </div>
 
                 <div>
                   <label htmlFor="message" className="block text-foreground text-sm font-medium mb-2">
-                    Project Details *
+                    MESSAGE
                   </label>
                   <Textarea
                     id="message"
@@ -161,7 +143,7 @@ export const ContactSection = () => {
                     required
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Tell us about your project, goals, and timeline..."
+                    placeholder="Tell us about your project..."
                     rows={5}
                     className="bg-secondary border-border focus:border-primary resize-none"
                   />
@@ -178,7 +160,7 @@ export const ContactSection = () => {
                     <>Sending...</>
                   ) : (
                     <>
-                      Send Message
+                      SUBMIT
                       <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
                     </>
                   )}
