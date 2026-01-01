@@ -114,26 +114,26 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="relative w-full mt-10 sm:mt-16 md:mt-20 pt-8 sm:pt-10 md:pt-12 border-t border-border"
+            className="w-full mt-10 sm:mt-16 md:mt-20 pt-8 sm:pt-10 md:pt-12 border-t border-border"
           >
-            {/* Mobile: Scattered layout */}
-            <div className="flex flex-wrap justify-center gap-x-6 gap-y-3 sm:hidden px-4">
+            {/* Mobile: Horizontal scroll */}
+            <div className="flex sm:hidden overflow-x-auto gap-6 pb-2 px-2 scrollbar-hide">
               {[
-                { text: 'Quick Setup', offset: 'ml-8' },
-                { text: 'Easy To Use', offset: '-ml-4' },
-                { text: 'CRM Integrated', offset: 'ml-12' },
-                { text: 'Social Compatible', offset: '-ml-6' },
-                { text: 'Robust & Fast', offset: 'ml-4' },
-                { text: 'SEO Compliant', offset: '-ml-2' },
+                'Quick Setup',
+                'Easy To Use',
+                'CRM Integrated',
+                'Social Compatible',
+                'Robust & Fast',
+                'SEO Compliant',
               ].map((feature, index) => (
-                <div key={index} className={`flex items-center gap-2 ${feature.offset}`}>
-                  <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
-                  <span className="text-sm text-muted-foreground">{feature.text}</span>
+                <div key={index} className="flex items-center gap-2 flex-shrink-0">
+                  <div className="w-2 h-2 bg-primary rounded-full" />
+                  <span className="text-sm text-muted-foreground whitespace-nowrap">{feature}</span>
                 </div>
               ))}
             </div>
 
-            {/* Desktop: Horizontal row */}
+            {/* Desktop: Centered row */}
             <div className="hidden sm:flex flex-wrap justify-center items-center gap-6 md:gap-8">
               {[
                 'Quick Setup',
