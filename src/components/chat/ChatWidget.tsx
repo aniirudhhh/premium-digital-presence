@@ -198,10 +198,16 @@ export const ChatWidget = () => {
               <div className="w-10 h-10 bg-primary-foreground/20 rounded-full flex items-center justify-center">
                 <Bot className="w-5 h-5 text-primary-foreground" />
               </div>
-              <div>
+              <div className="flex-1">
                 <h3 className="font-semibold text-primary-foreground">Marketing Assistant</h3>
                 <p className="text-xs text-primary-foreground/70">Online • Ready to help</p>
               </div>
+              <button 
+                onClick={() => setIsOpen(false)}
+                className="w-8 h-8 bg-primary-foreground/20 rounded-full flex items-center justify-center hover:bg-primary-foreground/30 transition-colors"
+              >
+                <X className="w-4 h-4 text-primary-foreground" />
+              </button>
             </div>
 
             {/* Messages */}
