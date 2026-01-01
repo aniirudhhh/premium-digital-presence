@@ -79,7 +79,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-sm sm:text-base md:text-lg text-muted-foreground max-w-2xl mb-3 sm:mb-4 leading-relaxed px-4"
+            className="text-sm sm:text-base md:text-lg text-muted-foreground w-full max-w-2xl mb-3 sm:mb-4 leading-relaxed px-4 break-words"
           >
             Growth Solutions For All — MICRO • SMALL • MID • ENTERPRISE
           </motion.p>
@@ -87,7 +87,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="text-xs sm:text-sm md:text-base text-muted-foreground max-w-3xl mb-6 sm:mb-10 leading-relaxed px-4"
+            className="text-xs sm:text-sm md:text-base text-muted-foreground w-full max-w-3xl mb-6 sm:mb-10 leading-relaxed px-4 break-words"
           >
             End-to-End Digital strategy ensures that every effort is Cohesive, Targeted, and Impactful. 
             Get marketing strategy that enables your business to identify ideal customers, analyze their behavior, and create personalized content that resonates.
