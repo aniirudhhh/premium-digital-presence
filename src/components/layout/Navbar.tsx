@@ -106,7 +106,7 @@ export const Navbar = () => {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 w-full h-screen bg-background z-[60] md:hidden flex flex-col"
+            className="fixed inset-0 w-full h-screen bg-background z-[60] md:hidden flex flex-col overflow-hidden"
           >
             {/* Mobile Menu Header */}
             <div className="flex items-center justify-between h-14 sm:h-20 px-4 sm:px-6 border-b border-border">
@@ -123,14 +123,14 @@ export const Navbar = () => {
             </div>
 
             {/* Mobile Menu Content */}
-            <div className="flex-1 flex flex-col justify-center items-center px-8">
+            <div className="flex-1 flex flex-col justify-center items-center px-8 overflow-hidden">
               <nav className="space-y-2 text-center">
                 {navLinks.map((link, index) => (
                   <motion.div
                     key={link.name}
-                    initial={{ opacity: 0, x: -40 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    exit={{ opacity: 0, x: -40 }}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 20 }}
                     transition={{ 
                       duration: 0.4, 
                       delay: index * 0.1,
