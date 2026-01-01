@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MessageCircle, X, Send, Bot, User } from 'lucide-react';
+import { MessageCircle, X, Send, Bot, User, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
@@ -112,6 +112,28 @@ export const ChatWidget = () => {
 
   return (
     <>
+      {/* Floating Help Pill */}
+      <AnimatePresence>
+        {!isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 10 }}
+            className="fixed bottom-[88px] right-6 z-50 flex items-center gap-1"
+          >
+            <motion.div
+              animate={{ scale: [1, 1.2, 1] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              <Sparkles className="w-4 h-4 text-primary" />
+            </motion.div>
+            <div className="px-4 py-2 bg-background border-2 border-primary rounded-full shadow-lg">
+              <span className="text-sm font-medium text-foreground">Need help? Ask us!</span>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
       {/* Chat Toggle Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
