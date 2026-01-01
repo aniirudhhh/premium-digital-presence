@@ -49,7 +49,7 @@ export const HeroSection = () => {
 
       {/* Content */}
       <div className="relative z-10 container-padding mx-auto max-w-7xl pt-32 pb-20">
-        <div className="flex flex-col items-center text-center">
+        <div className="flex w-full flex-col items-center text-center min-w-0 overflow-x-hidden">
           {/* Badge */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -79,7 +79,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-sm sm:text-base md:text-lg text-muted-foreground w-full max-w-2xl mb-3 sm:mb-4 leading-relaxed px-4 break-words"
+            className="text-sm sm:text-base md:text-lg text-muted-foreground w-full max-w-full sm:max-w-2xl mx-auto mb-3 sm:mb-4 leading-relaxed px-4 whitespace-normal min-w-0 [overflow-wrap:anywhere]"
           >
             Growth Solutions For All — MICRO • SMALL • MID • ENTERPRISE
           </motion.p>
@@ -87,7 +87,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="text-xs sm:text-sm md:text-base text-muted-foreground w-full max-w-3xl mb-6 sm:mb-10 leading-relaxed px-4 break-words"
+            className="text-xs sm:text-sm md:text-base text-muted-foreground w-full max-w-full sm:max-w-3xl mx-auto mb-6 sm:mb-10 leading-relaxed px-4 whitespace-normal min-w-0 [overflow-wrap:anywhere]"
           >
             End-to-End Digital strategy ensures that every effort is Cohesive, Targeted, and Impactful. 
             Get marketing strategy that enables your business to identify ideal customers, analyze their behavior, and create personalized content that resonates.
