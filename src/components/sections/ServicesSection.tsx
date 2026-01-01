@@ -1,42 +1,42 @@
 import { FadeUp, StaggerContainer, StaggerItem } from '@/components/animations/ScrollAnimations';
-import { Globe, Megaphone, TrendingUp, Palette, Search, BarChart3 } from 'lucide-react';
+import { Globe, Megaphone, TrendingUp, Users, Zap, BarChart3 } from 'lucide-react';
 
 const services = [
   {
     icon: Globe,
     title: 'Web Development',
-    description: 'Custom websites and web applications built with cutting-edge technology. Fast, secure, and scalable solutions.',
-    features: ['React / Next.js', 'E-commerce', 'Custom CMS', 'API Integration'],
+    description: 'Custom websites and web applications built with cutting-edge technology. Responsive, SEO-optimized, and fast-loading solutions.',
+    features: ['Responsive Ready', 'SEO Friendly', 'Optimized for Speed', 'CRM Integrated'],
   },
   {
     icon: Megaphone,
     title: 'Digital Marketing',
-    description: 'Data-driven marketing strategies that deliver real ROI. From social media to paid advertising.',
-    features: ['Social Media', 'PPC Campaigns', 'Email Marketing', 'Content Strategy'],
+    description: 'Data-driven marketing strategies leveraging the power of technology and the internet to engage with audiences effectively.',
+    features: ['AI Assisted Content', 'Campaign Centric', 'Social Media Growth', 'Content Strategy'],
   },
   {
-    icon: Palette,
-    title: 'Brand Identity',
-    description: 'Create a memorable brand that stands out. Logo design, brand guidelines, and visual identity systems.',
-    features: ['Logo Design', 'Brand Guidelines', 'Visual Identity', 'Brand Strategy'],
+    icon: Users,
+    title: 'Social Media Management',
+    description: 'Platform-optimized content that rides trends, builds community, and drives fan loyalty. Let us engineer your engagement.',
+    features: ['Content Planning', 'Community Building', 'Trend Analysis', 'Analytics Dashboard'],
   },
   {
-    icon: Search,
-    title: 'SEO Optimization',
-    description: 'Dominate search rankings with proven SEO strategies. Technical SEO, content optimization, and link building.',
-    features: ['Technical SEO', 'Content SEO', 'Link Building', 'Local SEO'],
+    icon: Zap,
+    title: 'Vyaraa Creator Suite',
+    description: 'Robust strategy-driven roadmaps for creators. Embracing innovations like AI-driven analytics and voice search optimization.',
+    features: ['Creator Content Launch', 'AI Analytics', 'Voice Search', 'Growth Strategy'],
   },
   {
     icon: TrendingUp,
     title: 'Growth Strategy',
-    description: 'Strategic consulting to accelerate your business growth. Market analysis and go-to-market strategies.',
-    features: ['Market Research', 'Competitor Analysis', 'Growth Hacking', 'KPI Tracking'],
+    description: 'Strategic consulting to accelerate your business growth. Data integration from various digital sources for clear insights.',
+    features: ['Market Research', 'Competitor Analysis', 'KPI Tracking', 'Performance Reports'],
   },
   {
     icon: BarChart3,
     title: 'Analytics & Insights',
-    description: 'Turn data into actionable insights. Custom dashboards, reporting, and performance tracking.',
-    features: ['Custom Dashboards', 'Data Analysis', 'Performance Reports', 'Conversion Tracking'],
+    description: 'Great marketing presence starts with data integration. Turn data into actionable insights with custom dashboards.',
+    features: ['Custom Dashboards', 'Data Analysis', 'Google Analytics', 'Conversion Tracking'],
   },
 ];
 
@@ -49,12 +49,12 @@ export const ServicesSection = () => {
       <div className="container-padding mx-auto max-w-7xl relative z-10">
         {/* Section Header */}
         <FadeUp className="text-center mb-16">
-          <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">Our Services</span>
+          <span className="text-primary font-medium text-sm uppercase tracking-wider mb-4 block">Digital Marketing</span>
           <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            What We Do Best
+            Digital Presence & Marketing
           </h2>
-          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Comprehensive digital solutions tailored to your business needs. From concept to execution, we handle it all.
+          <p className="text-muted-foreground text-lg max-w-3xl mx-auto">
+            We focus on giving the most cost-effective solutions to our clients, enabling them to navigate towards success in the digital space.
           </p>
         </FadeUp>
 

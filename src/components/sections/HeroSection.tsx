@@ -59,7 +59,7 @@ export const HeroSection = () => {
           >
             <span className="inline-flex items-center gap-2 px-4 py-2 bg-secondary/50 border border-border rounded-lg text-sm text-muted-foreground">
               <Sparkles className="w-4 h-4 text-primary" />
-              Premium Digital Agency
+              Creative Firepower | Strategic Precision
             </span>
           </motion.div>
 
@@ -70,8 +70,8 @@ export const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.1 }}
             className="font-display text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold text-foreground leading-[1.1] mb-6 max-w-5xl"
           >
-            We Build
-            <span className="block text-primary"> Digital Excellence</span>
+            NUMERO UNO
+            <span className="block text-primary">MARKETING</span>
           </motion.h1>
 
           {/* Subtitle */}
@@ -79,9 +79,18 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-10 leading-relaxed"
+            className="text-lg md:text-xl text-muted-foreground max-w-2xl mb-4 leading-relaxed"
           >
-            Strategic web design and digital marketing that transforms brands and drives measurable growth. We craft experiences that convert.
+            Growth Solutions For All — MICRO • SMALL • MID • ENTERPRISE
+          </motion.p>
+          <motion.p
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.25 }}
+            className="text-base text-muted-foreground max-w-3xl mb-10 leading-relaxed"
+          >
+            End-to-End Digital strategy ensures that every effort is Cohesive, Targeted, and Impactful. 
+            Get marketing strategy that enables your business to identify ideal customers, analyze their behavior, and create personalized content that resonates.
           </motion.p>
 
           {/* CTA Buttons */}
@@ -92,30 +101,32 @@ export const HeroSection = () => {
             className="flex flex-col sm:flex-row gap-4"
           >
             <Button variant="hero" size="xl" className="group">
-              Start Your Project
+              LET'S MEET!
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Button>
             <Button variant="heroOutline" size="xl">
-              View Our Work
+              Schedule Meeting
             </Button>
           </motion.div>
 
-          {/* Stats */}
+          {/* Features Row */}
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="flex flex-wrap justify-center gap-8 md:gap-16 mt-20 pt-12 border-t border-border"
+            className="flex flex-wrap justify-center gap-6 md:gap-10 mt-20 pt-12 border-t border-border"
           >
             {[
-              { value: '150+', label: 'Projects Delivered' },
-              { value: '98%', label: 'Client Satisfaction' },
-              { value: '12+', label: 'Years Experience' },
-              { value: '$50M+', label: 'Revenue Generated' },
-            ].map((stat, index) => (
-              <div key={index} className="text-center">
-                <p className="font-display text-3xl md:text-4xl font-bold text-foreground mb-1">{stat.value}</p>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
+              'Quick Setup',
+              'Easy To Use',
+              'CRM Integrated',
+              'Social Compatible',
+              'Robust & Fast',
+              'SEO Compliant',
+            ].map((feature, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-primary rounded-full" />
+                <span className="text-sm text-muted-foreground">{feature}</span>
               </div>
             ))}
           </motion.div>

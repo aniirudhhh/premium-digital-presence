@@ -4,9 +4,9 @@ import { Menu, X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
-  { name: 'Services', href: '#services' },
-  { name: 'Pricing', href: '#pricing' },
-  { name: 'About', href: '#about' },
+  { name: 'Home', href: '#' },
+  { name: 'Websites', href: '#pricing' },
+  { name: 'Marketing', href: '#services' },
   { name: 'Contact', href: '#contact' },
 ];
 
@@ -37,10 +37,7 @@ export const Navbar = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-2">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <span className="text-primary-foreground font-bold text-xl">A</span>
-            </div>
-            <span className="font-display text-xl font-semibold text-foreground">Apex</span>
+            <span className="font-display text-2xl font-bold text-primary">NUMERO</span>
           </a>
 
           {/* Desktop Navigation */}
@@ -59,7 +56,7 @@ export const Navbar = () => {
           {/* CTA Button */}
           <div className="hidden md:block">
             <Button variant="hero" size="lg">
-              Start Project
+              Let's Meet!
             </Button>
           </div>
 
@@ -95,7 +92,7 @@ export const Navbar = () => {
                   </a>
                 ))}
                 <Button variant="hero" size="lg" className="w-full mt-4">
-                  Start Project
+                  Let's Meet!
                 </Button>
               </div>
             </motion.div>
