@@ -64,10 +64,35 @@ export const Navbar = () => {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="md:hidden p-2 text-foreground"
+              className="md:hidden p-2 text-foreground relative w-10 h-10 flex items-center justify-center"
               aria-label="Toggle menu"
             >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+              <div className="w-6 h-5 relative flex flex-col justify-between">
+                <motion.span
+                  animate={{
+                    rotate: isMobileMenuOpen ? 45 : 0,
+                    y: isMobileMenuOpen ? 8 : 0,
+                  }}
+                  transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                  className="w-full h-0.5 bg-foreground block origin-center"
+                />
+                <motion.span
+                  animate={{
+                    opacity: isMobileMenuOpen ? 0 : 1,
+                    scaleX: isMobileMenuOpen ? 0 : 1,
+                  }}
+                  transition={{ duration: 0.2 }}
+                  className="w-full h-0.5 bg-foreground block"
+                />
+                <motion.span
+                  animate={{
+                    rotate: isMobileMenuOpen ? -45 : 0,
+                    y: isMobileMenuOpen ? -8 : 0,
+                  }}
+                  transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
+                  className="w-full h-0.5 bg-foreground block origin-center"
+                />
+              </div>
             </button>
           </div>
         </nav>
