@@ -114,7 +114,7 @@ export const HeroSection = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.5 }}
-            className="grid grid-cols-2 sm:grid-cols-3 md:flex md:flex-wrap justify-center gap-3 sm:gap-4 md:gap-8 mt-10 sm:mt-16 md:mt-20 pt-8 sm:pt-10 md:pt-12 border-t border-border w-full"
+            className="flex flex-col sm:flex-row sm:flex-wrap justify-center items-center gap-4 sm:gap-6 md:gap-8 mt-10 sm:mt-16 md:mt-20 pt-8 sm:pt-10 md:pt-12 border-t border-border w-full"
           >
             {[
               'Quick Setup',
@@ -124,9 +124,9 @@ export const HeroSection = () => {
               'Robust & Fast',
               'SEO Compliant',
             ].map((feature, index) => (
-              <div key={index} className="flex items-center justify-center gap-2 min-w-0">
-                <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-primary rounded-full flex-shrink-0" />
-                <span className="text-xs sm:text-sm text-muted-foreground text-center whitespace-normal text-balance min-w-0">{feature}</span>
+              <div key={index} className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-primary rounded-full flex-shrink-0" />
+                <span className="text-sm text-muted-foreground">{feature}</span>
               </div>
             ))}
           </motion.div>
